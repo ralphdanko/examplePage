@@ -1,3 +1,5 @@
-body {
-    color: red;
-}
+@import "partials/variables";
+@import "partials/header";
+@import "partials/page";
+@import "partials/forms";
+@import "partials/footer";
