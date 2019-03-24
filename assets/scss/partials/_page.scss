@@ -1,0 +1,122 @@
+//hero element
+.section--hero {
+    width: auto;
+    background-image: linear-gradient(135deg, color(secondary) 60%, color(secondary-darken));
+}
+
+.paragraph {
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    font-weight: 300;
+}
+
+.paragraph--hero {
+    max-width: 435px;
+    margin-top: 15px;
+}
+
+.box {
+    margin-bottom: 30px;
+}
+
+.social-button {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    background-image: linear-gradient(to bottom, color(primary) 35%, color(secondary) 180%);
+    border-radius: 26px;
+    padding: 2px;
+    margin-right: 22px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    .social-button__background {
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        border-radius: 21px;
+        background-color: color(secondary);
+
+        i {
+            margin: 13px;
+            width: 16px;
+            line-height: 16px;
+            display: block;
+            text-align: center;
+            color: color(secondary);
+        }
+    }
+
+    .social-button__background--inverted {
+        background-color: initial;
+    }
+}
+
+.row {
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-button {
+    background-color: color(primary);
+    display: inline-block;
+    padding: 14px;
+    color: #fff;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 30px 0;
+}
+
+@media screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1) {
+    .text-gradient--hero {
+        font-size: 45px;
+        margin-top: 50px;
+    }
+
+    .text-button {
+        padding: 20px 40px;
+    }
+
+    .social-button {
+        width: 52px;
+        height: 52px;
+    
+        .social-button__background {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+
+            i {
+                margin: 13px;
+                width: 22px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+    .paragraph--hero {
+        width: 320px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 1) {
+    .section--hero {
+        background-image: url("/assets/images/mobile-phone-screen-glass-settings.png"), linear-gradient(135deg, color(secondary) 60%, color(secondary-darken));
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        min-height: 550px;
+    }
+
+    .text-gradient--hero {
+        font-size: 50px;
+        margin-top: 100px;
+    }
+}

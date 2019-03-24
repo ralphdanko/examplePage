@@ -1,0 +1,16 @@
+@function color($color-name: 'primary') {
+    @return map-get($main-palette, $color-name);
+  };
+
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|Source+Sans+Pro:200,300');
+
+// colors
+$main-palette: (
+    primary: #ff6868,
+    secondary: #3d454f,
+    secondary-darken: #38404a,
+    secondary-darken-header: #333b45,
+    text: #3a424c,
+    text-light: #9aa0a8,
+    additional: #f5f7f9,
+);
