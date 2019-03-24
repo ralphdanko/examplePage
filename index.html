@@ -6,28 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>callstack</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo logo--header"></a>
-        <nav class="header__nav"></nav>
+        <div class="container">
+            <span class="header__span">
+                <a href="#" class="text-gradient text-gradient--header">Buje</a>
+            </span>
+            <nav class="header__nav">
+                <div class="hamburger-menu">
+                    <span class="hamburger-menu__stripe"></span>
+                    <span class="hamburger-menu__stripe"></span>
+                    <span class="hamburger-menu__stripe"></span>
+                </div>
+                <div class="primary-nav">
+                    <ul class="list">
+                        <li class="list__item--primary-nav"><a href="#">Home</a></li>
+                        <li class="list__item--primary-nav"><a href="#">Service</a></li>
+                        <li class="list__item--primary-nav"><a href="#">Portfolio</a></li>
+                        <li class="list__item--primary-nav"><a href="#">Pricing</a></li>
+                        <li class="list__item--primary-nav"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <section class="section section--hero">
-        <div class="row">
-            <!-- left side - text and buttons -->
-            <div class="column">
-                <h1 class="title title--hero"></h1>
-                <p class="paragraph paragraph--hero"></p>
-                <a href="#" class="text-button"></a>
-                <div class="container container--social-buttons">
-                    <a href="#" class="social-button"></a>
-                    <a href="#" class="social-button social-button--fill"></a>
-                    <a href="#" class="social-button"></a>
+        <div class="container">
+            <div class="row">
+                <!-- left side - text and buttons -->
+                <div class="column">
+                    <h1 class="text-gradient text-gradient--hero">We Deliver</h1>
+                    <p class="paragraph paragraph--hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <a href="#" class="text-button">Contact Us</a>
+                    <div class="box box--social-buttons">
+                        <div class="social-button">
+                            <a href="#" class="social-button__background">
+                                <i class="fab fa-facebook-f text-gradient"></i>
+                            </a>
+                        </div>
+                        <div class="social-button">
+                            <a href="#" class="social-button__background social-button__background--inverted">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="social-button">
+                            <a href="#" class="social-button__background">
+                                <i class="fab fa-linkedin-in text-gradient"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- right side - image -->
-            <div class="column">
-                <img src="" alt="">
+                <!-- right side - image -->
+                <div class="column">
+                    <img src="" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -142,7 +178,7 @@
     <section class="section section--tweet">
         <blockquote class="quote"></blockquote>
         <span class="byline"></span>
-        <div class="container container--social-buttons">
+        <div class="box box--social-buttons">
             <a href="#" class="social-button social-button--fill"></a>
         </div>
     </section>
