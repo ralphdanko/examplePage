@@ -82,5 +82,10 @@
         &:first-child {
             padding-left: 0;
         }
+
+        &:hover {
+            color: color(primary);
+            transition: 0.3s ease;
+        }
     }
 }

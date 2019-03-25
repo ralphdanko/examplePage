@@ -33,6 +33,10 @@ a {
 .container {
     margin: 0 auto;
     width: auto;
+    display: block;
+}
+
+.container--header {
     display: flex;
     justify-content: space-between;
 }
