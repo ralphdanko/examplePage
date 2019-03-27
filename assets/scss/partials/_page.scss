@@ -254,7 +254,7 @@
     }
 }
 
-@media screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (max-width: 991px) {
     .text-gradient--hero {
         font-size: 45px;
         margin-top: 50px;
@@ -293,13 +293,13 @@
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
     .paragraph--hero {
         width: 320px;
     }
 }
 
-@media screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-width: 992px) {
     .section--hero {
         background-image: url("/assets/images/mobile-phone-screen-glass-settings.png"), linear-gradient(135deg, color(secondary) 60%, color(secondary-darken));
         background-repeat: no-repeat;
@@ -344,7 +344,7 @@
     }
 }
 
-@media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (max-width: 767px) {
     .row--block {
         display: block;
     }
@@ -405,7 +405,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-width: 768px) {
     .column--3cols {
         margin-right: 20px;
 
@@ -450,7 +450,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     //pricing
     .column__header {
         height: 100px;
