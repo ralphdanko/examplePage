@@ -40,6 +40,9 @@ jspm_packages/
 css/
 .css
 
+#DS_Store
+.DS_Store
+
 # TypeScript v1 declaration files
 typings/
 
