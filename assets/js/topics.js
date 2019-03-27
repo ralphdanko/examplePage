@@ -86,13 +86,13 @@ $(window).on('load', function() {
           }
 
           defaultOption = "<option value='' selected='selected' hidden='hidden'>Choose Subtopic</option>"
-          select += "<select name='" + placeholder + "' id='project-type'>" + defaultOption;
+          select += "<select name='subtopic' id='subtopic'>" + defaultOption;
           //add subitems(options) within select
-          $('#subtopic').append(select);
-          $('#project-type').append(options);
-          $('#subtopic').append("</select>");
+          $('#project-type').append(select);
+          $('#subtopic').append(options);
+          $('#project-type').append("</select>");
         } else {
-          $('#subtopic').empty();
+          $('#project-type').empty();
         }
       }
     }
@@ -101,9 +101,9 @@ $(window).on('load', function() {
 //validating the input
 
   var inputName;
-  var inputMessage;
+  var inputQuestion;
   var inputTopic;
-  var inputProjectType;
+  var inputSubtopic;
   var inputEmail;
   var regEx;
 
@@ -113,11 +113,11 @@ $(window).on('load', function() {
     $('#error').empty();
     inputName = document.getElementById('name').value;
     inputEmail = document.getElementById('email').value;
-    inputMessage = document.getElementById('message').value;
+    inputQuestion = document.getElementById('question').value;
     inputTopic = checkValue("topic");
-    inputProjectType = document.getElementById('project-type');
-    if (inputProjectType !== null){
-      inputProjectType = checkValue("project-type");
+    inputSubtopic = document.getElementById('subtopic');
+    if (inputSubtopic !== null){
+      inputSubtopic = checkValue("subtopic");
     }
           
     if (inputName == ""){
@@ -139,21 +139,21 @@ $(window).on('load', function() {
      // console.log(inputTopic);
     }
 
-    if (inputProjectType == ""){
+    if (inputSubtopic == ""){
       $('#error').append("<p>subtopic empty</p>");
-    } else if (inputProjectType == null) {
+    } else if (inputSubtopic == null) {
       //console.log("null here");
     } else {
-     // console.log(inputProjectType);
+      console.log(inputSubtopic);
     }
 
-    if (inputMessage == ""){
+    if (inputQuestion == ""){
       $('#error').append("<p>textarea empty</p>");
     } else {
-     // console.log(inputMessage);
+     // console.log(inputQuestion);
     }
     
-    if (inputMessage == "" || inputEmail == "" || inputName == "" || inputTopic == "" || inputProjectType == ""){
+    if (inputQuestion == "" || inputEmail == "" || inputName == "" || inputTopic == "" || inputSubtopic == ""){
       return errCount = 1;
     } else return errCount = 0;
   }
@@ -179,15 +179,14 @@ $(window).on('load', function() {
     checkValidity();
 
     if (errCount == 1) {
-      //event.preventDefault();
       return false;
     } else {
       console.log("Name: " + inputName);
       console.log("Email: " + inputEmail);
       console.log("Topic: " + inputTopic);
-      console.log("Project Type: " + inputProjectType);
-      console.log("Message: " + inputMessage);
-      alert("Your form is submitted correctly");
+      console.log("Subtopic: " + inputSubtopic);
+      console.log("Message: " + inputQuestion);
+      alert("Your form was submitted correctly");
       event.preventDefault();
       location.reload();
     }
