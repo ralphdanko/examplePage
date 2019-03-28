@@ -5,7 +5,7 @@
 }
 
 .paragraph {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-family: 'Source Sans Pro', sans-serif;
     color: color(text-light);
     text-align: center;
@@ -21,6 +21,10 @@
 
 .box {
     margin-bottom: 30px;
+}
+
+.primary {
+    color: color(primary);
 }
 
 .social-button {
@@ -76,7 +80,7 @@
     color: #fff;
     border-radius: 8px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1.2rem;
     margin: 30px 0;
 
     &:hover {
@@ -122,7 +126,7 @@
     left: 57%;
     transform: translate(-50%, -50%);
     display: none;
-    font-size: 18px;
+    font-size: 1.8rem;
     width: 200px;
 
     .portfolio-title__circle {
@@ -169,7 +173,7 @@
 }
 
 .subtitle {
-    font-size: 12px;
+    font-size: 1.2rem;
     color: color(additional2);
     font-weight: 400;
     text-transform: uppercase;
@@ -256,7 +260,7 @@
 
 @media screen and (max-width: 991px) {
     .text-gradient--hero {
-        font-size: 45px;
+        font-size: 4.5rem;
         margin-top: 50px;
     }
 
@@ -283,13 +287,13 @@
 
     //shared elements max width: 991px
     .section__title {
-        font-size: 32px;
+        font-size: 3.2rem;
         margin: 40px 0;
     }
 
      //service section
      .column__title {
-        font-size: 20px;
+        font-size: 2rem;
     }
 }
 
@@ -308,12 +312,12 @@
     }
 
     .text-gradient--hero {
-        font-size: 50px;
+        font-size: 5rem;
         margin-top: 100px;
     }
 
     .section__title {
-        font-size: 38px;
+        font-size: 3.8rem;
         margin: 70px 0;
     }
 
@@ -322,7 +326,7 @@
     }
 
     .column__title {
-        font-size: 24px;
+        font-size: 2.4rem;
     }
 
     //pricing
@@ -385,7 +389,7 @@
     }
     
     .title {
-        font-size: 28px;
+        font-size: 2.8rem;
         margin-bottom: -5px;
     }
 
@@ -430,7 +434,7 @@
     }
     
     .title {
-        font-size: 28px;
+        font-size: 2.8rem;
         margin-bottom: -5px;
     }
 
@@ -445,7 +449,7 @@
     }
 
     .quote {
-        font-size: 32px;
+        font-size: 3.2rem;
         line-height: 48px;
     }
 }
@@ -461,7 +465,7 @@
     }
 
     .list__item {
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 
     //twitter

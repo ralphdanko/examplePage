@@ -1,12 +1,13 @@
 form {
     width: 100%;
+    margin-bottom: 40px;
 
     input, textarea, select {
         background-color: color(additional);
         border-radius: 3px;
         color: color(secondary);
         padding: 16px 8px;
-        font-size: 12px;
+        font-size: 1.2rem;
         text-transform: capitalize;
         text-indent: 26px;
         height: 46px;
@@ -39,14 +40,14 @@ form {
 
 .error {
         text-align: center;
-        font-size: 14px;
+        font-size: 1.4rem;
         color: red;
         width: 200px;
         margin: 0 auto 20px;
 }
 
 .error--inline {
-    font-size: 11px;
+    font-size: 1.1rem;
     //padding: 2px 9px;
     color: red;
 }
