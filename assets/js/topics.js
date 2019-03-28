@@ -90,9 +90,11 @@ $(window).on('load', function() {
           //add subitems(options) within select
           $('#project-type').append(select);
           $('#subtopic').append(options);
-          $('#project-type').append("</select>");
+          $('#project-type').append("</select><p id='error-subtopic' class='error--inline'></p>");
+          $('#project-type').addClass('margin');
         } else {
           $('#project-type').empty();
+          $('#project-type').removeClass('margin');
         }
       }
     }
@@ -102,92 +104,164 @@ $(window).on('load', function() {
 
   var inputName;
   var inputQuestion;
+  var inputTopicVal;
   var inputTopic;
+  var inputSubtopicVal;
   var inputSubtopic;
   var inputEmail;
   var regEx;
 
-  var errCount;
+  var errCount = 1;
 
+  //VALIDATION ON SUBMIT
   function checkValidity() {
-    $('#error').empty();
-    inputName = document.getElementById('name').value;
-    inputEmail = document.getElementById('email').value;
-    inputQuestion = document.getElementById('question').value;
-    inputTopic = checkValue("topic");
+    $('#error-name, #error-email, #error-topic, #error-subtopic, #error-question').empty();
+    inputName = document.getElementById('name');
+    inputEmail = document.getElementById('email');
+    inputQuestion = document.getElementById('question');
+    inputTopicVal = checkValue("topic");
+    inputTopic = document.getElementById('topic');
     inputSubtopic = document.getElementById('subtopic');
     if (inputSubtopic !== null){
-      inputSubtopic = checkValue("subtopic");
-    }
+      inputSubtopicVal = checkValue("subtopic");
+    } else inputSubtopicVal = null;
           
-    if (inputName == ""){
-      $('#error').append("<p>name empty</p>");
+    if (inputName.value == ""){
+      $('#error-name').append("Please enter your name");
+      $(inputName).addClass("invalid-input");
     } else {
-      //console.log(inputName);
+      $(inputName).removeClass("invalid-input");
     }  
     
     //should be there if user want to submit empty field, before editing it
-    if (inputEmail == ""){
-      $('#error').append("<p>email empty</p>");
+    if (inputEmail.value == ""){
+      $('#error-email').append("Please write correct email");
+      $(inputEmail).addClass("invalid-input");
     } else {
-      //console.log(inputEmail);
+      $(inputEmail).removeClass("invalid-input");
     }
       
-    if (inputTopic == ""){
-      $('#error').append("<p>topic empty</p>");
+    if (inputTopicVal == ""){
+      $('#error-topic').append("Please choose topic");
+      $(inputTopic).addClass("invalid-input");
     } else {
-     // console.log(inputTopic);
+      $(inputTopic).removeClass("invalid-input");
     }
 
-    if (inputSubtopic == ""){
-      $('#error').append("<p>subtopic empty</p>");
+    if (inputSubtopicVal == ""){
+      $('#error-subtopic').append("Please choose subtopic");
+      $(inputSubtopic).addClass("invalid-input");
     } else if (inputSubtopic == null) {
       //console.log("null here");
     } else {
-      console.log(inputSubtopic);
+      $(inputSubtopic).removeClass("invalid-input");
     }
 
-    if (inputQuestion == ""){
-      $('#error').append("<p>textarea empty</p>");
+    if (inputQuestion.value == ""){
+      $('#error-question').append("Please write your question");
+      $(inputQuestion).addClass("invalid-input");
     } else {
-     // console.log(inputQuestion);
+      $(inputQuestion).removeClass("invalid-input");
     }
-    
-    if (inputQuestion == "" || inputEmail == "" || inputName == "" || inputTopic == "" || inputSubtopic == ""){
+
+    if (inputQuestion.value == "" || inputEmail.value == "" || inputName.value == "" || inputTopicVal == "" || inputSubtopicVal == ""){
       return errCount = 1;
     } else return errCount = 0;
   }
 
-  //checking if email is correct
-  $('#email').change(function() {
+  //VALIDATION "ON" USER INPUT
+  //Check if email is correct
+  $('#email').blur(function() {
     regEx = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    inputEmail = document.getElementById('email').value;
-    $('#error2').empty();
-    //console.log(inputEmail);
-    if (regEx.test(inputEmail)) {
+    let inputId = document.getElementById('email');
+    $(inputId).removeClass("invalid-input");
+    $('#error-email').empty();
+    if (regEx.test(inputId.value)) {
       errCount = 0;
     } else {
       errCount = 1;
-      $('#error2').append("<p>email incorrect</p>");
+      $('#error-email').append("Please write correct email");
+      $(inputId).addClass("invalid-input");
     }
     return errCount; 
   });
 
-  //submiting a form & validating email
+  //check if name field is filled
+  $('#name').blur(function() {
+    let inputId = document.getElementById('name');
+    $(inputId).removeClass("invalid-input");
+    $('#error-name').empty();
+    if (inputId.value != "") {
+      errCount = 0;
+    } else {
+      errCount = 1;
+      $('#error-name').append("Please enter your name");
+      $(inputId).addClass("invalid-input");
+    }
+    return errCount; 
+  });
+
+  //check if topic is choosen
+  $('#topic').blur(function() {
+    let inputId = document.getElementById('topic');
+    $(inputId).removeClass("invalid-input");
+    $('#error-topic').empty();
+    if (inputId.value != "") {
+      errCount = 0;
+    } else {
+      errCount = 1;
+      $('#error-topic').append("Please choose topic");
+      $(inputId).addClass("invalid-input");
+    }
+    return errCount; 
+  });
+
+  //check if subtopic is choosen
+  $('#topic').change(function() {
+    $('#subtopic').blur(function() {
+      let inputId = document.getElementById('subtopic');
+      $(inputId).removeClass("invalid-input");
+      $('#error-subtopic').empty();
+      if (inputId.value != "") {
+        errCount = 0;
+      } else {
+        errCount = 1;
+        $('#error-subtopic').append("Please choose subtopic");
+        $(inputId).addClass("invalid-input");
+      }
+      return errCount; 
+    });
+  });
+
+  //check if question field is filled
+  $('#question').blur(function() {
+    let inputId = document.getElementById('question');
+    $(inputId).removeClass("invalid-input");
+    $('#error-question').empty();
+    if (inputId.value != "") {
+      errCount = 0;
+    } else {
+      errCount = 1;
+      $('#error-question').append("Please write your question");
+      $(inputId).addClass("invalid-input");
+    }
+    return errCount; 
+  });
+
+  //SUBMITTING A FORM
   $('#contactForm').submit(function(event) {
-    $('#error').empty();
     checkValidity();
 
     if (errCount == 1) {
       return false;
     } else {
-      console.log("Name: " + inputName);
-      console.log("Email: " + inputEmail);
-      console.log("Topic: " + inputTopic);
-      console.log("Subtopic: " + inputSubtopic);
-      console.log("Message: " + inputQuestion);
-      alert("Your form was submitted correctly");
+      console.log("Name: " + inputName.value);
+      console.log("Email: " + inputEmail.value);
+      console.log("Topic: " + inputTopicVal);
+      console.log("Subtopic: " + inputSubtopicVal);
+      console.log("Message: " + inputQuestion.value);
       event.preventDefault();
+      alert("Your form was submitted correctly");
       location.reload();
     }
   });

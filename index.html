@@ -251,18 +251,29 @@
             <h1 class="section__title">Contact</h1>
             <div class="row row--block">
             <form id="contactForm" method="post" action="">
-                <div id="error" class="error"></div>
-                <div id="error2" class="error"></div>
                 <div class="contactForm--3cols">
-                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
-                    <input type="email" name="email" id="email" placeholder="Enter Your Email" novalidate>
-                    <select name="topic" id="topic">
-                        <option value="" selected="selected" hidden="hidden">Choose Topic</option>
-                    </select>
+                    <div class="column column__contactForm">
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                        <p id="error-name" class="error--inline"></p>
+                    </div>
+                    <div class="column column__contactForm">
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email" novalidate>
+                        <p id="error-email" class="error--inline"></p>
+                    </div>
+                    <div class="column column__contactForm">
+                        <select name="topic" id="topic">
+                            <option value="" selected="selected" hidden="hidden" disabled>Choose Topic</option>
+                        </select>
+                        <p id="error-topic" class="error--inline"></p>
+                    </div>
                 </div>
-                <div id="project-type" class="contactForm--1col"></div>
+                    <div id="project-type">
+                    </div>
                 <div class="contactForm--1col">
-                    <textarea name="question" id="question" cols="30" rows="10" placeholder="Message..."></textarea>
+                    <div class="column column__contactForm">
+                        <textarea name="question" id="question" cols="30" rows="10" placeholder="Message..."></textarea>
+                        <p id="error-question" class="error--inline"></p>
+                    </div>
                 </div>
                 <div>
                     <button class="text-button center-button" type="submit" value="Submit">Submit</button>
