@@ -1,21 +1,8 @@
 # callstack
 Recruitment Task
 
-
-known problems/workarounds:
-- Open font Source Sans Pro used instead of Myriad Pro
-- hamburger menu is not implemented
-
-todo:
-- change pixels to rem for fonts; DONE
-- add footer area - DONE
-- add form validation for the rest of input fields - DONE
-- change gulp to allow releases
-- host page 
-- add dashed element to service
-- write what is missing (in known problems)
-- write instruction for code change about js validation
-- rewrite the readme
+## Host 
+The page is hosted on: http://ralph-danko.atthost24.pl/
 
 ## Checklist
 
@@ -35,6 +22,25 @@ todo:
 - [ ] On form submit (choose one)
   - [x] [**required**] print fields values to console **OR** 
   - [ ] [**optional**] send a request to mocked API
-- [ ] [**optional**] Host the implemented website to provide a preview for reviewers 
+- [x] [**optional**] Host the implemented website to provide a preview for reviewers 
 - [ ] [**optional**] Integrate automatic release of the page 
 - [x] [**required**] Copy this checklist into README file and check mark completed points 
+
+## Known Issues
+
+- Open font Source Sans Pro used instead of Myriad Pro
+
+## Todo
+
+- [ ] add dashed element to service - previously implemented using div, border & flexbox; removed since there was ~10px offset between 1000w & 1900w
+- [ ] implement Hamburger Menu
+
+
+## Form Validation
+
+The form validation should be performed while user inputs data OR before submit. 
+Unfortunatelly such implementation could cause bad user experience.
+Validating while user inputs data means the fields will be not highlighted if user click "Submit" before start filling out the fields.
+From the other hand, it is a good behaviour that email field is verified just after typing the addres.
+
+If needed, it can be quickly changed.
