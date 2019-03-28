@@ -206,6 +206,7 @@
         color: color(text-light);
         font-weight: 300;
         margin-bottom: 10px;
+        font-size: 1.6rem;
 
         &::before {
             font-family: "Font Awesome 5 Free"; content: "\f35a";
@@ -230,7 +231,7 @@
 .byline {
     margin: 15px 0;
     text-align: center;
-    font-size: 1
+    font-size: 1.6rem;
 }
 
 .byline__author {
@@ -405,7 +406,7 @@
 
     .quote {
         padding: 0 40px;
-        font-size: 24px;
+        font-size: 2.4rem;
     }
 }
 
