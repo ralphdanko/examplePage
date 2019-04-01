@@ -9,9 +9,11 @@
     margin: 55px 0;
 }
 
-.set-padding {
+.box--footer {
     margin: 0;
-    padding-top: 6px;
+    padding-top: 7px;
+    display: flex;
+    justify-content: center;
 }
 
 .copyrights {
