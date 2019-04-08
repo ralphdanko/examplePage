@@ -6,12 +6,12 @@ form {
         background-color: color(additional);
         border-radius: 3px;
         color: color(secondary);
-        padding: 16px 8px;
         font-size: 1.2rem;
         text-transform: capitalize;
         text-indent: 26px;
         height: 46px;
         width: 100%;
+        font-family: inherit;
 
         &::placeholder {
             color: color(text-form);
@@ -23,10 +23,36 @@ form {
         }
     }
 
+    select, option {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+    select {
+        background-image: 
+            linear-gradient(45deg, transparent 50%, gray 50%),
+            linear-gradient(135deg, gray 50%, transparent 50%),
+            linear-gradient(to right, #ccc, #ccc);
+        background-position:
+            calc(100% - 18px) 20px,
+            calc(100% - 13px) 20px,
+            calc(100% - 35px) 0.5rem;
+        background-size:
+            5px 5px,
+            5px 5px,
+            1px 3.5rem;
+        background-repeat: no-repeat;
+    }
+
     textarea {
         resize: none;
         height: 256px;
+        padding: 16px 0;
     }
+
+    textarea::-webkit-input-placeholder {
+        text-indent: 26px;
+        }
 
     .invalid-input {
         border: 2px solid #f00;
@@ -34,7 +60,7 @@ form {
     }
 }
 
-.margin{
+.margin {
    margin-bottom: 30px;
 }
 
@@ -48,7 +74,6 @@ form {
 
 .error--inline {
     font-size: 1.1rem;
-    //padding: 2px 9px;
     color: red;
 }
 
